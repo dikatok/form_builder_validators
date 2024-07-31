@@ -31,7 +31,7 @@ class UniqueValidator<T> extends BaseValidator<T> {
 
   @override
   String? validateValue(T valueCandidate) {
-    return values.where((T element) => element == valueCandidate).length != 1
+    return values.where((T element) => element == valueCandidate).length > 1
         ? errorText
         : null;
   }
